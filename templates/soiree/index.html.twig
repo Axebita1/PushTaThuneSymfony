@@ -15,7 +15,6 @@
     <table class="table table-hover">
         <thead>
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Lieu</th>
             <th scope="col">Date</th>
@@ -26,13 +25,13 @@
         <tbody>
         {% for s in soirees %}
         <tr>
-            <td>{{ s.id }}</td>
             <td>{{ s.nom }}</td>
             <td>{{ s.lieu }}</td>
             <td>{{ s.date|date('d-m-Y') }}</td>
 
             <td>
                 <a href="{{ path('soiree_entered', {"id":s.id}) }}" class="btn btn-sm btn-success">Entrer dans la soirée</a>
+                <a href="{{ path('soiree_update', {"id":s.id}) }}" class="btn btn-sm btn-warning">modifier la soirée</a>
                 <a href="{{ path('soiree_delete', {"id":s.id}) }}" class="btn btn-sm btn-danger">Supprimer la soirée</a>
             </td>
         </tr>

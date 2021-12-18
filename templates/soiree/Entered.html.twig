@@ -13,6 +13,7 @@
 
 
         <a href="{{ path('participant_add', {"id":idSoiree.id}) }}" class="btn btn-sm btn-primary">Ajouter un participant à la soirée</a>
+        <a href="{{ path('soiree_calcul', {"id":idSoiree.id}) }}" class="btn btn-sm btn-info">Calculer les remboursements</a>
 
         <table class="table table-hover">
             <thead>
@@ -35,6 +36,7 @@
                     </td>
                 </tr>
             {% endfor %}
+
             <tbody>
         </table>
     </div>
